@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>test page</title>
+	</head>
+	<body onload="hash_invalidator()">
+		<h1>Invalid Test Page</h1>
+		<p>This is page has a dynamic piece of content</p>
+		<div id="hash_invalidator">...</div>
+		<!-- I hardly know her! -->
+		<script src="./include.js"></script>
+		<script>
+			title_changer();
+		</script>
+	</body>
+</html>
