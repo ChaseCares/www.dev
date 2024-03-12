@@ -1,13 +1,15 @@
 function clear_div(element) {
 	console.log('Clearing div');
-	let div = document.getElementById(element);
+
+	const div = document.getElementById(element);
 	div.innerHTML = '';
 }
 
 function hash_invalidator() {
 	console.log('Runing hash invalidator');
-	let div = document.getElementById('hash_invalidator');
-	let text = '<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit';
+
+	const div = document.getElementById('hash_invalidator');
+	const text = '<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit';
 	for (let i = 0; i < 100; i++) {
 		div.innerHTML = div.innerHTML + text;
 	}
@@ -15,9 +17,19 @@ function hash_invalidator() {
 
 function variable_size_invalidator() {
 	console.log('Runing variable size invalidator');
+
 	const random_int = Math.floor(Math.random() * 20);
 	for (let i = -2; i < random_int; i++) {
 		hash_invalidator();
+	}
+}
+
+function ten_percent_invalidator() {
+	console.log('Runing ten percent invalidator');
+
+	const random_int = Math.floor(Math.random() * 10);
+	if (random_int === 0) {
+		clear_div('hash_invalidator');
 	}
 }
 
