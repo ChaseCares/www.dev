@@ -13,8 +13,16 @@ function hash_invalidator() {
 	}
 }
 
+function variable_size_invalidator() {
+	console.log('Runing variable size invalidator');
+	const random_int = Math.floor(Math.random() * 20);
+	for (let i = -2; i < random_int; i++) {
+		hash_invalidator();
+	}
+}
+
 function delayed_hash_invalidator() {
-	setTimeout(hash_invalidator, 1000);
+	setTimeout(hash_invalidator, 5000);
 }
 
 function title_changer() {
